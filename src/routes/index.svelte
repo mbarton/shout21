@@ -21,7 +21,9 @@
     </div>
     { #each $rooms.rooms as room }
         <div class="tile is-3">
-            <button class="button is-light">{room.name}</button>
+            <a
+                class="button is-light"
+                href="/rooms/{room.name}">{room.name}</a>
         </div>
     { /each }
 </div>

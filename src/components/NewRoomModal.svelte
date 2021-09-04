@@ -1,5 +1,6 @@
 <script>
     import { tick } from 'svelte';
+    import { goto } from '$app/navigation';
     import { createRoom } from '../stores/rooms';
     import Modal from '../components/Modal.svelte';
 
@@ -22,9 +23,14 @@
 
     function createNewRoom() {
         if(newRoomNameValid) {
+            const newRoomUrl = `/rooms/${newRoomName}`;
+
             createRoom(newRoomName);
+
             modal.close();
             resetNewRoom();
+
+            goto(newRoomUrl);
         }
     }
 </script>
