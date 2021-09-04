@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@fortawesome/fontawesome-free': ^5.15.4
   '@sveltejs/kit': next
   bulma: ^0.9.3
   sass: ^1.39.0
@@ -9,10 +10,13 @@ specifiers:
   svelte-preprocess: ^4.0.0
   tslib: ^2.0.0
   typescript: ^4.0.0
+  uuid: ^8.3.2
 
 dependencies:
+  '@fortawesome/fontawesome-free': 5.15.4
   bulma: 0.9.3
   sass: 1.39.0
+  uuid: 8.3.2
 
 devDependencies:
   '@sveltejs/kit': 1.0.0-next.162_svelte@3.42.4
@@ -23,6 +27,12 @@ devDependencies:
   typescript: 4.4.2
 
 packages:
+
+  /@fortawesome/fontawesome-free/5.15.4:
+    resolution: {integrity: sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
 
   /@rollup/pluginutils/4.1.1:
     resolution: {integrity: sha512-clDjivHqWGXi7u+0d2r2sBi4Ie6VLEAzWMIkvJLnDmxoOhBYOTfzGbOQBA32THHm11/LiJbd01tJUpJsbshSWQ==}
@@ -605,6 +615,11 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
 
   /vite/2.5.3:
     resolution: {integrity: sha512-1wMDnjflvtTTkMov8O/Xb5+w1/VW/Gw8oCf8f6dqgHn8lMOEqq0SaPtFEQeikFcOKCfSbiU0nEi0LDIx6DNsaQ==}
