@@ -5,8 +5,8 @@
     //import "bulma";
     //import "@fortawesome/fontawesome-free/css/all.min.css";
 
-    import NewRoomModal from '../components/NewRoomModal.svelte';
-    import { rooms } from '../stores/rooms';
+    import NewRoomModal from '$lib/components/NewRoomModal.svelte';
+    import { rooms } from '$lib/stores/rooms';
 
     let newRoomModal;
 </script>

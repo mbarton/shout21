@@ -1,8 +1,8 @@
 <script>
     import { tick } from 'svelte';
     import { goto } from '$app/navigation';
-    import { createRoom } from '../stores/rooms';
-    import Modal from '../components/Modal.svelte';
+    import { createRoom } from '$lib/stores/rooms';
+    import Modal from '$lib/components/Modal.svelte';
 
     let newRoomName = '';
     $: newRoomNameValid = newRoomName.length > 0;
