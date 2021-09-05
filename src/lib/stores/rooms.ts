@@ -15,14 +15,26 @@ export const rooms: Writable<Rooms> = writable({
     rooms: []
 });
 
-export function createRoom(name: string) {
+export function createRoom(name: string): Room {
+    const room = {
+        id: uuid(),
+        name
+    };
+
     rooms.update(({ rooms: existing }) => {
             return {
-                rooms: [...existing, {
-                    id: uuid(),
-                    name
-                }]
+                rooms: [...existing, room]
             }
         }
     );
+
+    return room;
+}
+
+export function deleteRoom(roomId: string) {
+    rooms.update(({ rooms: existing }) => {
+        return {
+            rooms: existing.filter(({ id }) => id !== roomId)
+        }
+    });
 }

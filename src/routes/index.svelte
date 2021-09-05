@@ -5,29 +5,29 @@
     //import "bulma";
     //import "@fortawesome/fontawesome-free/css/all.min.css";
 
-    import NewRoomModal from '$lib/components/NewRoomModal.svelte';
     import { rooms } from '$lib/stores/rooms';
-
-    let newRoomModal;
 </script>
 
 <div class="buttons are-large">
-    <div class="tile is-3 is-info">
-        <button
-            class="button is-primary"
-            on:click={() => newRoomModal.open()}>
-            New
-        </button>
-    </div>
+    <a
+        class="button is-primary"
+        href="/room/create">
+        New
+    </a>
     { #each $rooms.rooms as room }
-        <div class="tile is-3">
+        <div class="buttons has-addons are-large">
             <a
                 class="button is-light"
-                href="/rooms/{room.name}">{room.name}</a>
+                href="/room/{room.id}">
+                {room.name}
+            </a>
+            <a
+                class="button is-danger"
+                href="/room/{room.id}/delete">
+                <span class="icon is-small">
+                    <i class="fas fa-times"></i>
+                </span>
+            </a>
         </div>
     { /each }
 </div>
-
-<NewRoomModal
-    bind:this={newRoomModal}
-/>
